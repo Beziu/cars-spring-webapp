@@ -1,12 +1,25 @@
 package com.cars.world.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
+@Entity
+@Table(name="car")
 public class Car {
 
+    @Id
     private String name;
+
+    @Column(name = "productionDate", nullable = false)
     private Date productionDate;
+
+    @Column(name = "price", nullable = true)
     private Float price;
+
+    @Column(name = "engine", nullable = false)
     private String engine;
 
     public String getName() {

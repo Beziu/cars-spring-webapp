@@ -69,7 +69,7 @@ public class Interfejs {
         System.out.println("######                  ADD A CAR                  ######");
         System.out.println("#########################################################");
         Car car = new Car();
-        System.out.print("Podaj imię kota: ");
+        System.out.print("Type a name for car: ");
         car.setName(getUserInput());
 
         Pattern datePattern = Pattern.compile("[0-9]{4}.[0-1]?[0-9].[0-3]?[0-9]");
@@ -90,7 +90,7 @@ public class Interfejs {
         Pattern pricePattern = Pattern.compile("[0-9]+(\\.[0-9]+)?");
         String priceEntered;
         do {
-            System.out.print("Podaj wagę kota: ");
+            System.out.print("Type a price: ");
             priceEntered = getUserInput();
             
             if (pricePattern.matcher(priceEntered).matches()) {
